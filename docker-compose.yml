@@ -1,0 +1,10 @@
+version: '3'
+services:
+  lamp:
+    build: ./
+    # restart: always
+    ports:
+      - 8080:80
+    volumes:
+      - ./docker/php.ini:/usr/local/etc/php/conf.d/more_upload_size.ini
+      - ./:/var/www/html
